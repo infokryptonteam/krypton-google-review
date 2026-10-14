@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>KRYPTON Growth — Google Review</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#13a765;--navy:#102348;--muted:#627391;--line:#e7edf5;--blue:#1684f8;--gold:#ffbf35}
+*{box-sizing:border-box}
+body{margin:0;color:var(--navy);font-family:"DM Sans",sans-serif;background:linear-gradient(180deg,#fff,#f7fcff 65%,#f6fff8)}
+button,textarea{font:inherit}button{cursor:pointer}
+button:focus-visible,textarea:focus-visible{outline:3px solid #7fc5ff;outline-offset:3px}
+.top{min-height:76px;background:#ffffffed;border-bottom:1px solid #edf1f7;display:flex;align-items:center;justify-content:space-between;padding:12px max(5vw,20px);gap:15px}
+.brand{display:flex;align-items:center;gap:10px}
+.mark{width:42px;height:42px;border-radius:13px;background:#101c2b;color:#a5f46f;display:grid;place-items:center;font-size:25px;font-weight:900}
+.brand b{font-size:18px;letter-spacing:-.8px}.brand b span{color:var(--green)}
+.brand small{display:block;font-size:9px;letter-spacing:3px;font-weight:800;color:#53627a;margin-top:4px}
+.topright{display:flex;align-items:center;gap:18px;font-size:13px;font-weight:700}
+.chip{display:flex;align-items:center;gap:9px;padding:9px 13px;border:1px solid #c7f2d9;background:#f4fff7;border-radius:16px;font-size:12px}
+.chip strong{font-size:23px;color:var(--green)}
+.hero{padding:40px max(6.3vw,20px) 30px;background:radial-gradient(ellipse at 82% 10%,#c9f2ff,transparent 32%),radial-gradient(ellipse at 28% 45%,#e1ffe6,transparent 38%),radial-gradient(ellipse at 75% 100%,#f1e9ff,transparent 35%)}
+.hero-inner{max-width:1250px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:20px;min-height:235px}
+.eyebrow{display:inline-block;background:#ffeaf3;color:#df3279;padding:9px 15px;border-radius:999px;font-size:12px;font-weight:800}
+.hero h1{font-size:clamp(36px,4.5vw,58px);letter-spacing:-2.4px;line-height:1.06;margin:16px 0 14px;font-weight:900}
+.hero h1 span{color:#12945b}.hero p{font-size:16px;line-height:1.65;color:#3f5374;max-width:590px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.pills span{background:#ffffffdc;border:1px solid #edf1f7;border-radius:12px;padding:9px 11px;font-size:11px;font-weight:750;box-shadow:0 5px 15px #213c6210}
+.art{position:relative;min-height:230px;display:grid;place-items:center}
+.phone{transform:rotate(7deg);width:175px;height:235px;border:8px solid #1d2b4a;border-radius:28px;background:white;box-shadow:0 24px 40px #17284b35;padding:19px 12px;text-align:center}
+.g{font-size:38px;font-weight:900;letter-spacing:-4px;background:conic-gradient(#4285f4 0 27%,#34a853 27% 48%,#fbbc05 48% 69%,#ea4335 69% 83%,#4285f4 83%);color:transparent;background-clip:text}
+.phone h3{margin:0 0 12px;font-size:17px}.pstars{font-size:22px;letter-spacing:2px;color:#ffbd2e}
+.pbutton{margin-top:17px;padding:11px;border-radius:10px;color:white;background:linear-gradient(90deg,#4385ff,#0879ed);font-size:12px;font-weight:800}
+.float{position:absolute;font-size:43px;color:#ffbe2e;text-shadow:0 5px 0 #ef9f0a44}.f1{top:10px;right:17%;transform:rotate(12deg)}.f2{bottom:20px;left:12%;font-size:33px}
+.content{max-width:1250px;margin:auto;padding:0 27px 24px}
+.panel{background:#ffffffed;border:1px solid #edf1f7;border-radius:23px;box-shadow:0 12px 32px #203e6010;padding:23px;margin-bottom:13px}
+.head{display:flex;align-items:flex-start;gap:13px;margin-bottom:17px}
+.num{width:39px;height:39px;flex:none;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#39d66c,#099e68);color:white;font-size:17px;font-weight:900}
+.blue{background:linear-gradient(135deg,#19b3ff,#176af3)}.pink{background:linear-gradient(135deg,#ff6a9d,#ef2470)}.gold{background:linear-gradient(135deg,#ffd85b,#ffad00)}
+h2{font-size:20px;letter-spacing:-.5px;margin:1px 0 4px}
+.head p,.sub{font-size:13px;color:var(--muted);margin:0;line-height:1.5}
+.services{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.service{position:relative;min-height:102px;border:1px solid #e7edf6;border-radius:15px;background:white;color:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:10px 7px;font-size:12px;font-weight:700;line-height:1.35;text-align:center}
+.emoji{font-size:27px}
+.service.selected{border:1.5px solid #12b96b;background:linear-gradient(145deg,#f0fff5,#fff);box-shadow:0 0 0 3px #16b96b12}
+.service.selected:after{content:"✓";position:absolute;right:8px;top:7px;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:#13ad65;color:white}
+.columns{display:grid;grid-template-columns:1.2fr .9fr;gap:13px}.columns .panel{margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tag{border:1px solid transparent;background:#f2efff;color:#1e2b51;border-radius:13px;padding:11px 13px;font-size:12px;font-weight:700}
+.tag:before{content:"○";color:#9a91cc;margin-right:6px}
+.tag.selected{background:linear-gradient(100deg,#54d27e,#00a88a);color:white;box-shadow:0 6px 13px #12b87925}
+.tag.selected:before{content:"✓";color:white}
+.rating{text-align:center}.rating .head{text-align:left}
+.stars{display:flex;justify-content:center;gap:7px;margin:18px 0 10px}
+.star{border:0;background:transparent;color:#d8deea;font-size:clamp(35px,4vw,46px);padding:0;line-height:1}
+.star.active{color:#ffbf32;text-shadow:0 4px 8px #ffbf3238}
+.label{display:inline-block;padding:10px 17px;border-radius:999px;background:#e9fff0;color:#07894f;font-size:13px;font-weight:800}
+.langs{display:flex;gap:10px;flex-wrap:wrap}
+.lang{border:1px solid transparent;border-radius:13px;background:#f2efff;color:#28385b;padding:10px 16px;font-size:13px;font-weight:750}
+.lang span{display:inline-grid;place-items:center;margin-right:8px;width:28px;height:28px;border-radius:50%;background:white}
+.lang.selected{border-color:#12b96b;background:#f0fff5;color:#087e4b}
+.review-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}
+.reviewtitle{display:flex;gap:12px;align-items:center}.sparkle{font-size:33px}
+.reviewtitle h2{font-size:22px;margin:0 0 4px}
+.ghost{border:0;background:#f2efff;color:#25345a;border-radius:13px;padding:12px 14px;font-size:12px;font-weight:750}
+#reviewText{display:block;width:100%;resize:vertical;min-height:145px;padding:20px 21px;border:1px solid #dce9e1;border-radius:17px;background:rgba(255,255,255,.92);color:#233654;font-size:15px;line-height:1.8;box-shadow:inset 0 1px 3px #10234808}
+#reviewText:focus{outline:none;border-color:#54c88b;box-shadow:0 0 0 4px #13a7651a}
+.cta-wrap{text-align:center;padding:12px 0 22px}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:13px;max-width:760px;width:86%;padding:17px 22px;border:0;border-radius:999px;background:linear-gradient(100deg,#4385ff,#0879ed);color:white;font-size:clamp(15px,2vw,21px);font-weight:850;box-shadow:0 12px 24px #1684f838}
+.cta:hover{transform:translateY(-2px)}
+.gmark{display:grid;place-items:center;width:39px;height:39px;background:white;border-radius:50%;font-size:25px;font-weight:900;letter-spacing:-3px;color:#4285f4}
+.note{font-size:12px;color:#405575;margin:10px 0 0}
+.footer{padding:23px max(5vw,20px) 28px;background:radial-gradient(ellipse at 7% 0%,#b9f7c6,transparent 35%),radial-gradient(ellipse at 92% 0%,#b5f1ef,transparent 34%),#f7fbff}
+.trust{max-width:1160px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.trustitem{display:flex;align-items:center;gap:10px;padding:14px;border:1px solid white;border-radius:17px;background:#ffffffd9}
+.trustemoji{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:#e7fff0;font-size:22px;flex:none}
+.trustitem:nth-child(2) .trustemoji{background:#efedff}.trustitem:nth-child(3) .trustemoji{background:#ffeaf2}.trustitem:nth-child(4) .trustemoji{background:#fff4d9}
+.trustitem strong{display:block;font-size:12px;margin-bottom:3px}.trustitem small{display:block;font-size:11px;line-height:1.4;color:#60708e}
+.footerbrand{text-align:center;margin:24px auto 0;color:#1a3155;font-size:11px;letter-spacing:4px;font-weight:850}
+.thanks{text-align:center;margin:8px auto 0;color:#60708e;font-size:12px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#102348;color:white;border-radius:12px;padding:12px 18px;font-size:13px;box-shadow:0 12px 30px #10234835;transition:.25s;z-index:10}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr .6fr}.art{transform:scale(.85)}.services{grid-template-columns:repeat(3,minmax(0,1fr))}.trust{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.top{padding:12px 15px}.topright>span{display:none}.brand b{font-size:16px}.chip{padding:8px 10px;font-size:10px}.hero{padding:31px 19px 22px}.hero-inner{grid-template-columns:1fr;min-height:0}.hero h1{font-size:clamp(36px,10vw,49px);letter-spacing:-1.8px}.hero p{font-size:14px}.art{display:none}.pills{gap:7px}.pills span{font-size:10px;padding:8px}.content{padding:0 11px 20px}.panel{padding:18px 14px;border-radius:19px}.head h2{font-size:18px}.head p,.sub{font-size:12px}.services{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.service{min-height:91px}.columns{grid-template-columns:1fr;gap:12px}.rating{text-align:left}.rating .stars{justify-content:flex-start}.rating .label{font-size:12px}.review-head{align-items:flex-start}.reviewtitle h2{font-size:19px}.ghost{padding:10px;font-size:11px}.trust{grid-template-columns:1fr}.cta{width:100%;padding:13px;font-size:16px}.footer{padding:22px 15px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><div class="mark">K↗</div><div><b>KRYPTON <span>GROWTH</span></b><small>DIGITAL GROWTH PARTNER</small></div></div>
+  <div class="topright"><span>Digital Growth Partner</span><div class="chip"><strong>ϟ</strong><span>Your Review<br>Helps Us Grow</span></div></div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">✨ &nbsp; Share Your Experience</div>
+      <h1>Leave a Review<br>for <span>KRYPTON Growth</span></h1>
+      <p>Your feedback means a lot to us! It helps us improve and keeps us motivated to do even better. ❤️</p>
+      <div class="pills"><span>💎 Better Services</span><span>👥 Bigger Team</span><span>🚀 More Innovation</span><span>⭐ Happy Clients</span></div>
+    </div>
+    <div class="art" aria-hidden="true"><span class="float f1">★</span><span class="float f2">★</span><div class="phone"><div class="g">G</div><h3>Google Reviews</h3><div class="pstars">★★★★★</div><div class="pbutton">Write a Review</div></div></div>
+  </div>
+</section>
+
+<main class="content">
+  <section class="panel">
+    <div class="head"><span class="num">1</span><div><h2>Which service did you use?</h2><p>Select the service you received from KRYPTON Growth.</p></div></div>
+    <div class="services" id="services">
+      <button class="service selected" data-service="Digital Marketing"><span class="emoji">📣</span><span>Digital<br>Marketing</span></button>
+      <button class="service" data-service="Website Development"><span class="emoji">💻</span><span>Website<br>Development</span></button>
+      <button class="service" data-service="Graphic Design"><span class="emoji">🎨</span><span>Graphic<br>Design</span></button>
+      <button class="service" data-service="Social Media Management"><span class="emoji">📱</span><span>Social Media<br>Management</span></button>
+      <button class="service" data-service="Business Consulting"><span class="emoji">📊</span><span>Business<br>Consulting</span></button>
+      <button class="service" data-service="Other Service"><span class="emoji">⚙️</span><span>Other<br>Service</span></button>
+    </div>
+  </section>
+
+  <div class="columns">
+    <section class="panel">
+      <div class="head"><span class="num blue">2</span><div><h2>How was your experience?</h2><p>Select what genuinely describes your experience.</p></div></div>
+      <div class="tags" id="experiences">
+        <button class="tag selected" data-exp="Professional team">Professional Team</button>
+        <button class="tag" data-exp="Creative work">Creative Work</button>
+        <button class="tag" data-exp="Good communication">Good Communication</button>
+        <button class="tag" data-exp="Timely delivery">Timely Delivery</button>
+        <button class="tag" data-exp="Great results">Great Results</button>
+        <button class="tag" data-exp="Value for money">Value for Money</button>
+      </div>
+    </section>
+
+    <section class="panel rating">
+      <div class="head"><span class="num pink">3</span><div><h2>Your Rating</h2><p>How many stars would you give us?</p></div></div>
+      <div class="stars" id="stars">
+        <button class="star active" data-rating="1" aria-label="1 star">★</button>
+        <button class="star active" data-rating="2" aria-label="2 stars">★</button>
+        <button class="star active" data-rating="3" aria-label="3 stars">★</button>
+        <button class="star active" data-rating="4" aria-label="4 stars">★</button>
+        <button class="star active" data-rating="5" aria-label="5 stars">★</button>
+      </div>
+      <div class="label" id="ratingLabel">5 Stars — Excellent! 🎉</div>
+    </section>
+  </div>
+
+  <section class="panel">
+    <div class="head"><span class="num gold">4</span><div><h2>Choose Language</h2><p>In which language should we prepare your review draft?</p></div></div>
+    <div class="langs" id="languages">
+      <button class="lang selected" data-lang="English"><span>EN</span>English ✓</button>
+      <button class="lang" data-lang="Hindi"><span>हि</span>Hindi</button>
+      <button class="lang" data-lang="Hinglish"><span>H+</span>Hinglish</button>
+    </div>
+  </section>
+
+  <section class="panel card">
+    <div class="review-head">
+      <div class="reviewtitle"><span class="sparkle">✨</span><div><h2>Your Review Draft</h2><p class="sub">Generated from your selections. Edit it to match your actual experience.</p></div></div>
+      <button class="ghost" id="regen">⟳ &nbsp; Generate Again</button>
+    </div>
+    <textarea id="reviewText" rows="5" aria-label="Editable review draft"></textarea>
+  </section>
+
+  <div class="cta-wrap">
+    <button class="cta" id="google"><span class="gmark">G</span><span>Submit Review</span><span>→</span></button>
+    <p class="note">🔒 Google opens in a new tab. Please check your draft. You will submit your review on Google yourself.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="trust">
+    <div class="trustitem"><span class="trustemoji">🛡️</span><div><strong>100% Genuine</strong><small>Your honest feedback helps us grow.</small></div></div>
+    <div class="trustitem"><span class="trustemoji">👥</span><div><strong>Better Services</strong><small>We keep improving for you.</small></div></div>
+    <div class="trustitem"><span class="trustemoji">❤️</span><div><strong>Motivates Us</strong><small>Your review keeps our team going.</small></div></div>
+    <div class="trustitem"><span class="trustemoji">🏆</span><div><strong>Bigger Impact</strong><small>Helps us reach more businesses.</small></div></div>
+  </div>
+  <div class="footerbrand">KRYPTON GROWTH</div>
+  <div class="thanks">Thank you for being a part of our journey! 🙏</div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const GOOGLE_REVIEW_URL = "https://g.page/r/CZCxvVmVi6wLEBM/review";
+
+let service = "Digital Marketing";
+let experiences = ["Professional team"];
+let rating = 5;
+let language = "English";
+
+const reviewText = document.getElementById("reviewText");
+const toast = document.getElementById("toast");
+let toastTimer;
+
+function notify(message) {
+  toast.textContent = message;
+  toast.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove("show"), 2400);
+}
+
+function generateReview() {
+  const details = experiences.join(", ");
+  if (language === "Hindi") {
+    return rating <= 2
+      ? `Maine KRYPTON Growth se ${service} ki service li thi. Mera experience ${rating}/5 raha.${details ? " Mera feedback: " + details + "." : ""}`
+      : `KRYPTON Growth se ${service} ka kaam karwaya tha. Mera experience ${rating}/5 raha.${details ? " " + details + " mere experience ka hissa rahe." : ""}`;
+  }
+
+  if (language === "Hinglish") {
+    return rating <= 2
+      ? `KRYPTON Growth se ${service} ka kaam karwaya tha. Mera experience ${rating}/5 raha.${details ? " Mera feedback: " + details + "." : ""}`
+      : `KRYPTON Growth ke saath ${service} ka kaam kiya. Overall experience ${rating}/5 raha.${details ? " " + details + " bhi experience ka part rahe." : ""}`;
+  }
+
+  return rating <= 2
+    ? `I used KRYPTON Growth for ${service.toLowerCase()} and my experience was ${rating}/5.${details ? " My feedback: " + details + "." : ""}`
+    : `I worked with KRYPTON Growth for ${service.toLowerCase()} and my experience was ${rating}/5.${details ? " " + details + " stood out to me." : ""}`;
+}
+
+function updateReview() {
+  reviewText.value = generateReview();
+}
+
+document.querySelectorAll("[data-service]").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll("[data-service]").forEach(item =>
+      item.classList.toggle("selected", item === button)
+    );
+    service = button.dataset.service;
+    updateReview();
+  });
+});
+
+document.querySelectorAll("[data-exp]").forEach(button => {
+  button.addEventListener("click", () => {
+    const value = button.dataset.exp;
+    experiences = experiences.includes(value)
+      ? experiences.filter(item => item !== value)
+      : [...experiences, value];
+    button.classList.toggle("selected", experiences.includes(value));
+    updateReview();
+  });
+});
+
+document.querySelectorAll("[data-rating]").forEach(button => {
+  button.addEventListener("click", () => {
+    rating = Number(button.dataset.rating);
+    document.querySelectorAll("[data-rating]").forEach(item =>
+      item.classList.toggle("active", Number(item.dataset.rating) <= rating)
+    );
+
+    const labels = {
+      1: "1 Star — Needs Improvement",
+      2: "2 Stars — Fair",
+      3: "3 Stars — Good",
+      4: "4 Stars — Very Good",
+      5: "5 Stars — Excellent! 🎉"
+    };
+
+    document.getElementById("ratingLabel").textContent = labels[rating];
+    updateReview();
+  });
+});
+
+document.querySelectorAll("[data-lang]").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll("[data-lang]").forEach(item =>
+      item.classList.toggle("selected", item === button)
+    );
+    language = button.dataset.lang;
+    updateReview();
+  });
+});
+
+document.getElementById("regen").addEventListener("click", () => {
+  updateReview();
+  notify("Review draft refreshed");
+});
+
+document.getElementById("google").addEventListener("click", () => {
+  const confirmed = confirm(
+    "Please ensure this draft honestly reflects your own experience. Google will open next, and you will submit the review yourself. Continue?"
+  );
+  if (confirmed) {
+    window.open(GOOGLE_REVIEW_URL, "_blank", "noopener,noreferrer");
+  }
+});
+
+updateReview();
+</script>
+</body>
+</html>
